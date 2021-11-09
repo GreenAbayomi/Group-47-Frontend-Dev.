@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ /* The root pseudo-class is used to set the colors */
+:root {
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --hover-state: blueviolet;
+    --Dark-blue: hsl(223, 47%, 23%) ;
+}
+
+body {
+    background: url('images/pattern-background-desktop.svg') no-repeat;
+    font-family: 'Red Hat Display', sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vw;
+    font-weight: 500;
+}
+    
+
+/* The main container styles */
+#container {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0px 10px 30px  var(--Dark-blue);
+    padding-bottom: 30px;
+}
+
+#illustration img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 20px 20px 0 0;
+}
+/* Introduction class styles*/
+h1{
+    font-weight: 900;
+    font-size: 25px;
+    color: var(--Dark-blue);
+}
+
+p  {
+    font-weight: 500;
+    color:var(--Desaturated-blue);
+}
+
+
+.introduction{
+    padding: 20px 60px;
+    margin:  20px auto;
+}
+
+.card{
+    margin: 0 auto; 
+    background-color: var(--Very-pale-blue);
+    border-radius: 10px;
+    display: flex; 
+    justify-content: space-evenly ;
+    padding: 15px 5px;   
+    width: 70%;   
+    
+}
+
+.card img  {
+    margin-left: -10px;
+    width: 50px;
+    height: 50px;
+    
+}
+  
+
+.price-plan {
+    margin-left: -5px;
+    margin-right: 50px;
+}
+
+.change {
+    margin-top: 10px;
+}
+
+.change a:hover,  .attribution a:hover {
+    color: var(--hover-state);
+    text-decoration: none;
+}
+
+.attribution {
+    margin-top: 20px;
+}
+
+button {
+    display: inline-block;
+    font-weight: 700;
+    padding: 12px 5px ;
+    margin: 30px auto;
+    border-radius: 10px;  
+    background-color: var(--Bright-blue);
+    box-shadow: 5px 5px 5px 5px var(--Very-pale-blue);
+    border: none;
+    width: 70%;
+    color:white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--hover-state);
+}
+
+.cancel-order a , .attribution a{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--Desaturated-blue);
+    margin: 10px auto;
+}
+
+.cancel-order a:hover {
+    color: #000;
+}
+
+
+/* Mobile Design */
+
+@media screen and (max-width: 375px) {
+
+    body {
+        background: url('images/pattern-background-mobile.svg') no-repeat;
+        /* overflow: hidden !important; */
+        height: 100%;
+        /* margin: 100px 0; */
+    }
+
+    #container {
+        width: 600px;
+        border-radius: 0;
+
+    }
+
+    #illustration img {
+        border-radius: 0;
+    }
+    
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    .introduction{
+        padding: 20px 30px;
+    }
+
+    .card{
+        padding: 15px 10px;   
+        width: 90%;   
+        flex-direction: column;
+    }
+
+    .card img  {
+        margin-left: 0;
+        margin: auto;
+    }
+
+    .price-plan {
+        margin: 10px 0;
+
+    }
+
+    .change {
+        margin-top: 0;
+    }
+
+    button {
+        width: 90%;
+    }
+}
